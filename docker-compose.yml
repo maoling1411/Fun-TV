@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  app:
+    image: registry.cn-shanghai.aliyuncs.com/ml-io/fun-tv:latest
+    ports:
+      - "1314:1314"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=root@123456
+      - DB_NAME=fun
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root@123456
+      MYSQL_DATABASE: fun
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+    command:
+      --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./mysql:/docker-entrypoint-initdb.d
+
+volumes:
+  db-data:
