@@ -6,6 +6,9 @@
 
 演示站：https://fly.maoling.fun/
 
+切图：
+<img src="./assets/images-01.png" alt="images-01" style="zoom:67%;" />
+
 ## 灵感来源
 
 - **[LibreTV](https://github.com/LibreSpark/LibreTV)**  
