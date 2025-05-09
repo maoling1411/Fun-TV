@@ -18,6 +18,7 @@ services:
 
   db:
     image: mysql:5.7
+    container_name: fun-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root@123456
@@ -30,7 +31,7 @@ services:
       - "3306:3306"
     volumes:
       - db-data:/var/lib/mysql
-      - ./mysql:/docker-entrypoint-initdb.d
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
 volumes:
   db-data:
