@@ -3,6 +3,8 @@ version: '3.8'
 services:
   app:
     image: registry.cn-shanghai.aliyuncs.com/ml-io/fun-tv:latest
+    name: fun-tv
+    restart: always
     ports:
       - "1314:1314"
     environment:
