@@ -8,11 +8,8 @@
 
 切图：
 
-<img src="./assets/images-01.png" alt="images-01" />
 <img src="./assets/images-02.png" alt="images-02" />
 <img src="./assets/images-03.jpg" alt="images-03" width="50%" />
-<img src="./assets/images-04.jpg" alt="images-04" width="50%" />
-<img src="./assets/images-05.jpg" alt="images-05" width="50%" />
 
 ## 灵感来源
 
